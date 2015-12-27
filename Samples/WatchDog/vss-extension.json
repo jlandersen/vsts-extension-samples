@@ -43,7 +43,6 @@
         }
     ],
     "scopes": [
-        "vso.work",
-        "vso.code_write"
+        "vso.work"
     ]
 }
