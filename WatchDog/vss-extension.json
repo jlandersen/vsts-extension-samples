@@ -1,0 +1,49 @@
+{
+    "manifestVersion": 1,
+    "id": "task-watcher-extension",
+    "version": "1.0.0",
+    "name": "Task Status Watch Dog",
+    "description": "Monitors the status of tasks and highlights those that are not making progress",
+    "publisher": "jeppeandersen",
+    "icons": {
+        "default": "images/logo.png"
+    },
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "TaskWatcher",
+            "type": "ms.vss-web.hub",
+            "description": "Adds Watch Dog to the Work hub group",
+            "targets": [
+                "ms.vss-work-web.work-hub-group"
+            ],
+            "properties": {
+                "name": "Watch Dog",
+                "order": 99,
+                "uri": "index.html"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "index.html",
+            "addressable": true
+        },
+        {
+            "path": "sdk/scripts",
+            "addressable": true
+        },
+        {
+            "path": "images/logo.png",
+            "addressable": true
+        }
+    ],
+    "scopes": [
+        "vso.work",
+        "vso.code_write"
+    ]
+}
